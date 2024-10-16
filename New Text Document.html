@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Checkboxes with Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .question {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Random Questions</h1>
+    <form id="questionForm">
+        <!-- Checkboxes will be added here by JavaScript -->
+    </form>
+</div>
+
+<script>
+    const questions = [
+        "What is your favorite color?",
+        "Do you like traveling?",
+        "What was the last book you read?",
+        "Do you have a pet?",
+        "What is your dream job?",
+        "What is your favorite movie?",
+        "Do you prefer coffee or tea?",
+        "What is your favorite hobby?",
+        "What is your favorite season?",
+        "Do you believe in aliens?",
+        "Do you enjoy cooking?",
+        "What is your favorite type of music?",
+        "What sport do you like?",
+        "Do you play any musical instruments?",
+        "What is your favorite food?",
+        "Where would you like to travel next?",
+        "What is your favorite TV show?",
+        "Do you speak more than one language?",
+        "Are you an early bird or a night owl?",
+        "What is your favorite animal?",
+        "Do you have any tattoos?",
+        "What was your first job?",
+        "Do you like spicy food?",
+        "What is your favorite book genre?",
+        "Do you have a favorite quote?",
+        "Do you believe in fate?",
+        "What is your favorite board game?",
+        "What is your favorite holiday?",
+        "What is your favorite dessert?",
+        "Do you prefer the beach or mountains?",
+        "What is your dream car?",
+        "Do you collect anything?",
+        "What is your favorite childhood memory?",
+        "What is your favorite pizza topping?",
+        "What is your favorite city?",
+        "Do you believe in ghosts?",
+        "Do you enjoy hiking?",
+        "Do you prefer cats or dogs?",
+        "What is your favorite sport to watch?",
+        "What was your favorite subject in school?",
+        "What is your favorite fruit?",
+        "Do you have any siblings?",
+        "Do you like roller coasters?",
+        "What is your favorite ice cream flavor?",
+        "What is your favorite thing to do on a weekend?",
+        "What is your favorite time of day?",
+        "What is your favorite app on your phone?",
+        "Do you enjoy camping?",
+        "What is your favorite superhero?",
+        "What is your favorite type of weather?",
+        "Do you enjoy puzzles?",
+        "What is your dream vacation?",
+        "What is your favorite mode of transportation?",
+        "Do you like photography?",
+        "What is your favorite flower?",
+        "What is your favorite fast food?",
+        "Do you like gardening?",
+        "What is your favorite type of art?",
+        "Do you enjoy shopping?",
+        "What is your favorite type of shoe?",
+        "What is your favorite social media platform?",
+        "What is your favorite snack?",
+        "What is your favorite kind of cheese?",
+        "Do you prefer summer or winter?",
+        "What is your favorite song?",
+        "Do you like reading fiction or non-fiction?",
+        "Do you enjoy painting?",
+        "What is your favorite drink?",
+        "What is your favorite video game?",
+        "Do you like swimming?",
+        "What is your favorite amusement park ride?",
+        "What is your favorite plant?",
+        "Do you like watching documentaries?",
+        "What is your favorite way to relax?",
+        "What is your favorite phone brand?",
+        "Do you like sushi?",
+        "What is your favorite magazine?",
+        "Do you enjoy baking?",
+        "What is your favorite style of clothing?",
+        "What is your favorite sandwich?",
+        "What is your favorite cartoon character?",
+        "Do you like playing board games?",
+        "What is your favorite type of fish?",
+        "Do you prefer mornings or nights?",
+        "What is your favorite beverage?",
+        "Do you like going to concerts?",
+        "What is your favorite color to wear?",
+        "What is your favorite type of pasta?",
+        "Do you enjoy going to museums?",
+        "What is your favorite candle scent?",
+        "Do you like playing video games?",
+        "What is your favorite type of tree?",
+        "What is your favorite subject in history?",
+        "Do you prefer reading or watching TV?",
+        "What is your favorite thing to do with friends?",
+        "What is your favorite breakfast food?",
+        "Do you like bowling?",
+        "What is your favorite kind of soup?",
+        "Do you like trying new restaurants?",
+        "What is your favorite cake flavor?",
+        "What is your favorite sport to play?",
+        "Do you like going to the gym?"
+    ];
+
+    const form = document.getElementById("questionForm");
+
+    for (let i = 0; i < 100; i++) {
+        let question = questions[Math.floor(Math.random() * questions.length)];
+        let div = document.createElement("div");
+        div.classList.add("question");
+
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = `checkbox${i}`;
+        checkbox.name = `question${i}`;
+
+        let label = document.createElement("label");
+        label.htmlFor = `checkbox${i}`;
+        label.textContent = question;
+
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        form.appendChild(div);
+    }
+</script>
+
+</body>
+</html>
